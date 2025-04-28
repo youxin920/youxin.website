@@ -1,73 +1,102 @@
-# Welcome to your Lovable project
+# YouXin Digital Dreams - מפת פרויקט
 
-## Project info
+## סקירת הפרויקט
+YouXin Digital Dreams הוא אתר אינטרנט מודרני ומותאם למובייל, שנבנה באמצעות React, TypeScript ו-Tailwind CSS. האתר מציג שירותים דיגיטליים ומספק טופס יצירת קשר ללקוחות פוטנציאליים.
 
-**URL**: https://lovable.dev/projects/e4a960e6-7448-45d1-9c4e-6a84590e8092
+## מבנה הפרויקט
 
-## How can I edit this code?
+### קבצי ליבה
+- `index.html` - קובץ HTML ראשי
+- `src/main.tsx` - נקודת כניסה ראשית ל-React
+- `src/App.tsx` - קומפוננטת האפליקציה הראשית
+- `src/index.css` - סגנונות CSS גלובליים
+- `tailwind.config.ts` - הגדרות Tailwind CSS
 
-There are several ways of editing your application.
+### קומפוננטות
 
-**Use Lovable**
+#### קומפוננטות מבנה
+- `Navbar.tsx` - סרגל ניווט עם תפריט רספונסיבי
+  - מטפל באפקטים בעת גלילה ובתפריט למובייל
+  - מכיל קישורים לחלקים שונים באתר
+  - מתאים את המראה שלו בהתאם למיקום הגלילה
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/e4a960e6-7448-45d1-9c4e-6a84590e8092) and start prompting.
+- `Logo.tsx` - קומפוננטת הלוגו של האתר
+  - מציגה את הלוגו "youxin.website"
+  - מתאימה את הצבע בהתאם למיקום הגלילה של סרגל הניווט
 
-Changes made via Lovable will be committed automatically to this repo.
+- `Footer.tsx` - כותרת תחתונה עם קישורים ומידע על זכויות יוצרים
 
-**Use your preferred IDE**
+#### קומפוננטות חלקים ראשיים
+- `Hero.tsx` - חלק ראשי עם כותרת וקריאה לפעולה
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- `Services.tsx` - חלק השירותים המציג את השירותים המוצעים
+  - מציג כרטיסי שירות עם אייקונים ותיאורים
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- `WhyChooseUs.tsx` - חלק המדגיש את היתרונות של החברה
+  - מציג את היתרונות של בחירת YouXin לשירותים דיגיטליים
 
-Follow these steps:
+- `Testimonials.tsx` - חלק המלצות לקוחות
+  - מציג משוב מלקוחות מרוצים
+
+- `CallToAction.tsx` - חלק יצירת קשר עם טופס
+  - מכיל את טופס יצירת הקשר וקישור לוואטסאפ
+  - מבנה ממורכז לחוויית משתמש טובה יותר
+
+#### קומפוננטות טפסים
+- `ContactForm.tsx` - טופס יצירת קשר לפניות לקוחות
+  - אוסף מידע מהמשתמש (שם, אימייל, טלפון, דרישות)
+  - שולח נתונים למערכת Supabase
+  - מספק משוב באמצעות התראות toast
+
+### קומפוננטות ממשק משתמש
+הפרויקט משתמש באוסף של קומפוננטות UI לשימוש חוזר בתיקייה `src/components/ui/`:
+- Button, Input, Textarea - אלמנטי טופס
+- Card - מיכל לתוכן
+- Toast - מערכת התראות
+- Dialog, Sheet - קומפוננטות מודאליות
+- ועוד כלי UI רבים אחרים
+
+### אינטגרציות
+- `src/integrations/supabase/` - הגדרת לקוח Supabase וטיפוסים
+  - מטפל בשליחת טפסים ואחסון נתונים
+
+### Hooks
+- `src/hooks/use-mobile.tsx` - Hook מותאם לזיהוי מכשירים ניידים
+- `src/hooks/use-toast.ts` - Hook להתראות toast
+
+## עיצוב
+הפרויקט משתמש ב-Tailwind CSS לעיצוב עם צבעים מותאמים אישית המוגדרים בקונפיגורציה:
+- צבעים עיקריים: youxin-blue, youxin-purple
+- עיצוב רספונסיבי למובייל, טאבלט ודסקטופ
+
+## פרטי יצירת קשר
+- וואטסאפ: 058-717-7012
+
+## מאגר
+הפרויקט מאוחסן ב-GitHub בכתובת: https://github.com/youxin920/youxin.website.git
+
+## התקנה והפעלה
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# שלב 1: שכפל את המאגר באמצעות כתובת ה-Git של הפרויקט
+git clone https://github.com/youxin920/youxin.website.git
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# שלב 2: נווט לתיקיית הפרויקט
+cd youxin.website
 
-# Step 3: Install the necessary dependencies.
+# שלב 3: התקן את התלויות הנדרשות
 npm i
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# שלב 4: הפעל את שרת הפיתוח עם טעינה מחדש אוטומטית ותצוגה מקדימה מיידית
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
+## טכנולוגיות
+פרויקט זה נבנה באמצעות:
 
 - Vite
 - TypeScript
 - React
 - shadcn-ui
 - Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/e4a960e6-7448-45d1-9c4e-6a84590e8092) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+- Supabase
